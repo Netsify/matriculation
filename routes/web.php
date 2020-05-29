@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => true]);
 
-Route::resource('profile', 'ProfileController'); //нужно ли мн.число profiles?
+Route::resource('profile', 'ProfileController')->only([
+    'index', 'store'
+]); //нужно ли мн.число profiles?
 
 Route::resource('adverts', 'AdvertController');
 

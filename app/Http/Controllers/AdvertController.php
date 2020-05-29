@@ -2,25 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AdvertRequest;
 use App\Models\Advert;
-use Illuminate\Http\Request;
 
 class AdvertController extends Controller
 {
+    /**
+     * @var Advert
+     */
+    private $advert;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Advert $advert)
     {
+        $this->advert = $advert;
         $this->middleware('auth');
     }
 
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function index()
     {
@@ -32,7 +38,7 @@ class AdvertController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function create()
     {
@@ -42,81 +48,69 @@ class AdvertController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  AdvertRequest  $request
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(AdvertRequest $request)
     {
-        $request->validate([
-            'title'=>'required',
-            'body'=>'required',
-        ]);
-
-        $advert = new Advert([
+        $this->advert->create([
             'title' => $request->get('title'),
             'body' => $request->get('body')
-        ]);
+        ])->save();
 
-        $advert->save();
-
-        return redirect('/adverts')->with('success', 'Объявление добавлено');
+        return redirect('/adverts')->with('message', config('app.advert_added'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Advert  $advert
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Advert  $advert
+     * @return \Illuminate\View\View
      */
     public function show(Advert $advert)
     {
-        //
+        return view('adverts.show', compact('advert'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Advert  $advert
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Advert  $advert
+     * @return \Illuminate\View\View
      */
     public function edit(Advert $advert)
     {
-        return view('adverts.edit');
+        return view('adverts.edit', compact('advert'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Advert  $advert
-     * @return \Illuminate\Http\Response
+     * @param  AdvertRequest  $request
+     * @param  \App\Models\Advert  $advert
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, Advert $advert)
+    public function update(AdvertRequest $request, Advert $advert)
     {
-        // Нужен рефакторинг в отдельный реквест класс
-        $request->validate([
-            'title'=>'required',
-            'body'=>'required',
-        ]);
-
         $advert->title = $request->get('title');
         $advert->body = $request->get('body');
 
         $advert->save();
 
-        return redirect('/adverts')->with('success', 'Объявление добавлено'); //текст вынести в отдельную константу
+        return redirect('/adverts')->with('message', config('app.advert_updated'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Advert  $advert
-     * @return \Illuminate\Http\Response
+     * @param \App\Models\Advert $advert
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function destroy(Advert $advert)
     {
         $advert->delete();
 
-        return redirect('/adverts')->with('success', 'Объявление удалено');
+        return redirect('/adverts')->with('message', config('app.advert_deleted'));
     }
 }

@@ -12,20 +12,20 @@
                         @endforeach
                     </ul>
                 </div>
-                <br />
+            <br />
             @endif
 
-            <form method="post" action="{{ route('adverts.store') }}">
+            <form method="post" action="{{ route('adverts.update', $advert->id) }}">
                 @method('PATCH')
                 @csrf
                 <div class="form-group">
                     <label for="title">Заголовок:</label>
-                    <input type="text" class="form-control" name="school" value="{{ $currentAdvert->school }}" />
+                    <input type="text" class="form-control" name="title" value="{{ $advert->title }}" />
                 </div>
 
                 <div class="form-group">
                     <label for="body">Текст объявления</label>
-                    <textarea class="form-control" name="body">{{ $currentAdvert->graduation_year }}</textarea> />
+                    <textarea class="form-control" name="body"> {{ $advert->body }} </textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Сохранить</button>
@@ -34,9 +34,9 @@
 
         <div class="col-sm-12">
 
-            @if(session()->get('success'))
+            @if(session()->get('message'))
                 <div class="alert alert-success">
-                    {{ session()->get('success') }}
+                    {{ session()->get('message') }}
                 </div>
             @endif
         </div>

@@ -62,7 +62,7 @@ class ProfileController extends Controller
             'address' => $request->get('address')]
         );
 
-        return redirect('profile')->with('success', 'Анкета сохранена');
+        return redirect('profile')->with('message', config('app.profile_saved'));
     }
 
     /**

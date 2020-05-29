@@ -33,9 +33,9 @@
 
         <div class="col-sm-12">
 
-            @if(session()->get('success'))
+            @if(session()->get('message'))
                 <div class="alert alert-success">
-                    {{ session()->get('success') }}
+                    {{ session()->get('message') }}
                 </div>
             @endif
         </div>
