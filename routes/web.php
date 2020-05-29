@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes(['verify' => true]);
 
-Auth::routes();
+Route::resource('profile', 'ProfileController'); //нужно ли мн.число profiles?
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('adverts', 'AdvertController');
+
+Route::resource('/', 'IndexController')->only([
+    'index'
+]);
