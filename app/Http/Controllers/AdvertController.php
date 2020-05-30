@@ -2,25 +2,26 @@
 
 namespace App\Http\Controllers;
 
+//use App\Services\AdvertService;
+use App\Repositories\AdvertRepository;
 use App\Http\Requests\AdvertRequest;
-use App\Models\Advert;
 
 class AdvertController extends Controller
 {
     /**
-     * @var Advert
+     * @var AdvertRepository
      */
-    private $advert;
+    private $advertRepository;
 
     /**
      * Create a new controller instance.
      *
-     * @return void
+     * @param AdvertRepository $advertRepository
      */
-    public function __construct(Advert $advert)
+    public function __construct(AdvertRepository $advertRepository)
     {
-        $this->advert = $advert;
         $this->middleware('auth');
+        $this->advertRepository = $advertRepository;
     }
 
     /**
@@ -30,7 +31,7 @@ class AdvertController extends Controller
      */
     public function index()
     {
-        $adverts = Advert::all();
+        $adverts = $this->advertRepository->getAllAdverts();
 
         return view('index', compact('adverts'));
     }
@@ -53,10 +54,10 @@ class AdvertController extends Controller
      */
     public function store(AdvertRequest $request)
     {
-        $this->advert->create([
+        $this->advertRepository->createAdvert([
             'title' => $request->get('title'),
             'body' => $request->get('body')
-        ])->save();
+        ]);
 
         return redirect('/adverts')->with('message', config('app.advert_added'));
     }
@@ -67,8 +68,10 @@ class AdvertController extends Controller
      * @param  \App\Models\Advert  $advert
      * @return \Illuminate\View\View
      */
-    public function show(Advert $advert)
+    public function show($id)
     {
+        $advert = $this->advertRepository->getById($id);
+
         return view('adverts.show', compact('advert'));
     }
 
@@ -78,8 +81,10 @@ class AdvertController extends Controller
      * @param  \App\Models\Advert  $advert
      * @return \Illuminate\View\View
      */
-    public function edit(Advert $advert)
+    public function edit($id)
     {
+        $advert = $this->advertRepository->getById($id);
+
         return view('adverts.edit', compact('advert'));
     }
 
@@ -90,12 +95,12 @@ class AdvertController extends Controller
      * @param  \App\Models\Advert  $advert
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(AdvertRequest $request, Advert $advert)
+    public function update(AdvertRequest $request, $id)
     {
-        $advert->title = $request->get('title');
-        $advert->body = $request->get('body');
-
-        $advert->save();
+        //нужен отдельный метод сохранения сколько угодно полей передаваемых как параметр
+        $this->advertRepository->title = $request->get('title');
+        $this->advertRepository->body = $request->get('body');
+        $this->advertRepository->getById($id)->save();
 
         return redirect('/adverts')->with('message', config('app.advert_updated'));
     }
@@ -103,13 +108,12 @@ class AdvertController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Advert $advert
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy(Advert $advert)
+    public function destroy($id)
     {
-        $advert->delete();
+        $this->advertRepository->destroy($id);
 
         return redirect('/adverts')->with('message', config('app.advert_deleted'));
     }

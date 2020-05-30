@@ -19,19 +19,21 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <h2 class="card-title"> {{ $advert->title }} </h2>
-                                <p class="card-text"> {{ $advert->body }} </p>
-                                <div align="right"> {{ $advert->updated_at }} </div>
+                                <div class="card-title">
+                                    <a href="{{ route('adverts.show', $advert->id)}}"><h2> {{ $advert->title }} </h2></a>
+                                </div>
+                                <div class="card-text">
+                                    {{ preg_replace('/(.*?[?!.](?=\s|$)).*/', '\\1', $advert->body) }}
+                                </div>
+                                <div align="right">
+                                    {{ $advert->updated_at }}
+                                </div>
                             </div>
                         </div>
 
                         <div class="d-flex justify-content-between">
                             <div>
                                 <a style="margin: 19px;" href="{{ route('adverts.edit', $advert->id)}}" class="btn btn-primary">Редактировать</a>
-                            </div>
-
-                            <div>
-                                <a href="{{ route('adverts.show', $advert->id)}}">Далее</a>
                             </div>
 
                             <div>
