@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 //use App\Services\AdvertService;
+use App\Models\Advert;
+
 use App\Repositories\AdvertRepository;
 use App\Http\Requests\AdvertRequest;
 
@@ -32,6 +34,8 @@ class AdvertController extends Controller
     public function index()
     {
         $adverts = $this->advertRepository->getAllAdverts();
+
+//        $adverts = Advert::all();
 
         return view('index', compact('adverts'));
     }
@@ -97,10 +101,10 @@ class AdvertController extends Controller
      */
     public function update(AdvertRequest $request, $id)
     {
-        //нужен отдельный метод сохранения сколько угодно полей передаваемых как параметр
-        $this->advertRepository->title = $request->get('title');
-        $this->advertRepository->body = $request->get('body');
-        $this->advertRepository->getById($id)->save();
+        $advert = $this->advertRepository->getById($id);
+        $advert->title = $request->get('title');
+        $advert->body = $request->get('body');
+        $advert->save();
 
         return redirect('/adverts')->with('message', config('app.advert_updated'));
     }

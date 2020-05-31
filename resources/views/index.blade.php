@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row align-items-center d-flex justify-content-between">
-                        <h4>Объявления</h4>
+                        Объявления
                         <a href="{{ route('adverts.create') }}" class="btn btn-primary">Новое объявление</a>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                                     <a href="{{ route('adverts.show', $advert->id)}}"><h2> {{ $advert->title }} </h2></a>
                                 </div>
                                 <div class="card-text">
-                                    {{ preg_replace('/(.*?[?!.](?=\s|$)).*/', '\\1', $advert->body) }}
+                                    {{ $advert->body }}
                                 </div>
                                 <div align="right">
                                     {{ $advert->updated_at }}
