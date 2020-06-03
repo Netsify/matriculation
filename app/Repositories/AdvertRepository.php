@@ -30,10 +30,11 @@ class AdvertRepository extends BaseRepository
     /**
      * Create an advert.
      *
-     * @param array $advert
+     * @param array $inputs
+     * @return void
      */
-    public function createAdvert($fields)
+    public function createAdvert($inputs)
     {
-        $this->model->create($fields)->save();
+        $this->model->create($inputs)->save();
     }
 }

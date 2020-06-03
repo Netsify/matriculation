@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-//use App\Services\AdvertService;
-use App\Models\Advert;
-
 use App\Repositories\AdvertRepository;
 use App\Http\Requests\AdvertRequest;
 
@@ -35,8 +32,6 @@ class AdvertController extends Controller
     {
         $adverts = $this->advertRepository->getAllAdverts();
 
-//        $adverts = Advert::all();
-
         return view('index', compact('adverts'));
     }
 
@@ -59,8 +54,8 @@ class AdvertController extends Controller
     public function store(AdvertRequest $request)
     {
         $this->advertRepository->createAdvert([
-            'title' => $request->get('title'),
-            'body' => $request->get('body')
+            'title' => $request->title,
+            'body' => $request->body
         ]);
 
         return redirect('/adverts')->with('message', config('app.advert_added'));
@@ -102,8 +97,8 @@ class AdvertController extends Controller
     public function update(AdvertRequest $request, $id)
     {
         $advert = $this->advertRepository->getById($id);
-        $advert->title = $request->get('title');
-        $advert->body = $request->get('body');
+        $advert->title = $request->title;
+        $advert->body = $request->body;
         $advert->save();
 
         return redirect('/adverts')->with('message', config('app.advert_updated'));
@@ -117,7 +112,7 @@ class AdvertController extends Controller
      */
     public function destroy($id)
     {
-        $this->advertRepository->destroy($id);
+        $this->advertRepository->remove($id);
 
         return redirect('/adverts')->with('message', config('app.advert_deleted'));
     }

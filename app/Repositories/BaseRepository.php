@@ -28,7 +28,7 @@ abstract class BaseRepository {
      * @param  int $id
      * @return void
      */
-    public function destroy($id)
+    public function remove($id)
     {
         $this->getById($id)->delete();
     }

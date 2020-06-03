@@ -2,30 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Models\Profile;
+use App\Http\Requests\ProfileRequest;
+use App\Repositories\ProfileRepository;
 
 class ProfileController extends Controller
 {
     /**
+     * @var ProfileRepository
+     */
+    private $profileRepository;
+
+    /**
      * Create a new controller instance.
      *
-     * @return void
+     * @param ProfileRepository $profileRepository
      */
-    public function __construct()
+    public function __construct(ProfileRepository $profileRepository)
     {
         $this->middleware('auth');
+        $this->profileRepository = $profileRepository;
     }
 
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View
      */
     public function index()
     {
-        $profile = Profile::where('user_id', \Auth::id())->first();
+        $profile = $this->profileRepository->getCurrentProfile();
 
         return view('profile', compact('profile'));
     }
@@ -44,22 +49,17 @@ class ProfileController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function store(Request $request)
+    public function store(ProfileRequest $request)
     {
-        $request->validate([
-            'school'=>'required',
-            'graduation_year'=>'required',
-        ]);
-
-        Profile::updateOrCreate(
+        $this->profileRepository->updateOrCreateProfile(
             ['user_id' => \Auth::id()],
-            ['school' => $request->get('school'),
-            'graduation_year' => $request->get('graduation_year'),
-            'citizenship' => $request->get('citizenship'),
-            'city' => $request->get('city'),
-            'address' => $request->get('address')]
+            ['school' => $request->school,
+            'graduation_year' => $request->graduation_year,
+            'citizenship' => $request->citizenship,
+            'city' => $request->city,
+            'address' => $request->address]
         );
 
         return redirect('profile')->with('message', config('app.profile_saved'));
@@ -94,7 +94,7 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProfileRequest $request, $id)
     {
         //
     }

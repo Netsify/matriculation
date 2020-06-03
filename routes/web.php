@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => true]);
 
+Route::resource('/', 'IndexController')->only([
+    'index'
+]);
+
+Route::resource('adverts', 'AdvertController');
+
 Route::resource('profile', 'ProfileController')->only([
     'index', 'store'
 ]); //нужно ли мн.число profiles?
 
-Route::resource('adverts', 'AdvertController');
+Route::get('/documents', 'DocumentController@index')->name('documents.index');
 
-Route::resource('/', 'IndexController')->only([
-    'index'
-]);
+Route::post('/documents/upload', 'DocumentController@upload')->name('documents.upload');
