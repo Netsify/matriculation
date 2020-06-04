@@ -24,7 +24,7 @@ class DocumentRequest extends FormRequest
     public function rules()
     {
         return [
-            'certificate' => 'required|mimes:pdf|max:2048',
+//            'certificate' => 'required|mimes:pdf|max:2048',
         ];
     }
 }

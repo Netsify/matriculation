@@ -17,6 +17,7 @@ class CreateDocumentsTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('document_type_id');
+            $table->string('hash_name');
             $table->string('name');
             $table->string('path');
             $table->timestamps();

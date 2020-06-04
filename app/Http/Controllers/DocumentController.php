@@ -3,9 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\DocumentRequest;
+use App\Repositories\DocumentRepository;
 
 class DocumentController extends Controller
 {
+    /**
+     * @var DocumentRepository
+     */
+    private $documentRepository;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param DocumentRepository $documentRepository
+     */
+    public function __construct(DocumentRepository $documentRepository)
+    {
+        $this->middleware('auth');
+        $this->documentRepository = $documentRepository;
+    }
+
     public function index()
     {
         return view('document');
@@ -13,8 +30,8 @@ class DocumentController extends Controller
 
     public function upload(DocumentRequest $request)
     {
-        $request->file('certificate')->store('certificates', 'public');
-        $request->file('passport')->store('passports', 'public');
+        foreach ($request->file() as $key => $file)
+            $this->documentRepository->createDocument($key, $value);
 
         return view('document');
     }

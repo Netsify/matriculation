@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6932629c-15bd-406b-9a47-6ff078954730" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/matriculation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/matriculation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_02_191430_create_documents_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/DocumentRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/DocumentRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_04_113053_create_documents_table.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +136,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Models" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -164,7 +167,7 @@
       <workItem from="1591247452230" duration="50000" />
       <workItem from="1591247521239" duration="53000" />
       <workItem from="1591247593073" duration="49000" />
-      <workItem from="1591247656601" duration="1004000" />
+      <workItem from="1591247656601" duration="11131000" />
     </task>
     <servers />
   </component>
@@ -172,9 +175,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591251288367">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1591251288367" />
+    <state x="477" y="246" key="NewPhpClassDialog" timestamp="1591250099421">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="246" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1591250099421" />
     <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1591247664026">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591247664026" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1591253756941">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1591253756941" />
   </component>
 </project>
