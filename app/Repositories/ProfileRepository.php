@@ -25,9 +25,16 @@ class ProfileRepository extends BaseRepository
      * @param array $inputs
      * @return void
      */
-    public function updateOrCreateProfile($check, $inputs)
+    public function updateOrCreateProfile($inputs)
     {
-        $this->model->updateOrCreate($check, $inputs)->save();
+        $this->model->updateOrCreate(
+            ['user_id' => \Auth::id()],
+            ['school' => $inputs['school'],
+            'graduation_year' => $inputs['graduation_year'],
+            'citizenship' => $inputs['citizenship'],
+            'city' => $inputs['city'],
+            'address' => $inputs['address']
+            ]);
     }
 
     /**

@@ -16,7 +16,7 @@ class Profile extends Model
     ];
 
     /**
-     * One to Many relation
+     * One to One relation
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

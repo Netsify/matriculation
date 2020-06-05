@@ -7,10 +7,8 @@
                 @foreach($users as $user)
 
                     <div class="card">
-                        <div class="card-header">
-                            <div class="row align-items-center d-flex justify-content-between">
-                                {{ $user->name }}
-                            </div>
+                        <div class="card-header" align="center">
+                            {{ $user->name }}
                         </div>
 
                         <div class="card-body">
@@ -19,15 +17,17 @@
                                 <div class="card-body">
                                     <div class="card-text">
                                         {{ $user->email }}
-                                    </div>
-                                    <div align="right">
-                                        {{ $users->created_at }}
+                                        <br>
+                                        {{ $user->profile->school }}
+                                        <br>
+                                        {{ $user->profile->citizenship }}
                                     </div>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+                    <br>
 
                 @endforeach
             </div>

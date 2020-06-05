@@ -21,9 +21,7 @@ Route::post('/', 'AdvertController@store')->name('adverts.store');
 
 Route::resource('adverts', 'AdvertController')->except(['index', 'store']);
 
-Route::resource('profile', 'ProfileController')->only([
-    'index', 'store'
-]); //нужно ли мн.число profiles?
+Route::resource('profile', 'ProfileController')->only(['index', 'store']);
 
 Route::get('/documents', 'DocumentController@index')->name('documents.index');
 

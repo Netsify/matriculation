@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileRequest;
 use App\Repositories\ProfileRepository;
+use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
@@ -49,20 +50,12 @@ class ProfileController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(ProfileRequest $request)
     {
-        $this->profileRepository->updateOrCreateProfile(
-            ['user_id' => \Auth::id()],
-            ['school' => $request->school,
-                'graduation_year' => $request->graduation_year,
-                'citizenship' => $request->citizenship,
-                'city' => $request->city,
-                'address' => $request->address]
-        );
+        $this->profileRepository->updateOrCreateProfile($request->all());
 
-        return redirect('profile')->with('message', config('app.profile_saved'));
+        return back()->with('message', config('app.profile_saved'));
     }
 
     /**
