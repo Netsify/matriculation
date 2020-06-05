@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Profile;
+use Illuminate\Support\Collection;
 
 class ProfileRepository extends BaseRepository
 {
@@ -32,11 +33,10 @@ class ProfileRepository extends BaseRepository
     /**
      * Get current profile data.
      *
-     * @return void
+     * @return Collection
      */
     public function getCurrentProfile()
     {
-        //подумать, скорее всего нужно по другому переписать
-        return $this->model->where('user_id', \Auth::id())->first();
+        return $this->model->with('user')->find(\Auth::id());
     }
 }

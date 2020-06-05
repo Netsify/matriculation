@@ -53,12 +53,9 @@ class AdvertController extends Controller
      */
     public function store(AdvertRequest $request)
     {
-        $this->advertRepository->createAdvert([
-            'title' => $request->title,
-            'body' => $request->body
-        ]);
+        $this->advertRepository->createAdvert($request->all());
 
-        return redirect('/adverts')->with('message', config('app.advert_added'));
+        return redirect('/')->with('message', config('app.advert_added'));
     }
 
     /**
@@ -97,11 +94,10 @@ class AdvertController extends Controller
     public function update(AdvertRequest $request, $id)
     {
         $advert = $this->advertRepository->getById($id);
-        $advert->title = $request->title;
-        $advert->body = $request->body;
-        $advert->save();
 
-        return redirect('/adverts')->with('message', config('app.advert_updated'));
+        $this->advertRepository->updateAdvert($request->all(), $advert);
+
+        return redirect('/')->with('message', config('app.advert_updated'));
     }
 
     /**
@@ -114,6 +110,6 @@ class AdvertController extends Controller
     {
         $this->advertRepository->remove($id);
 
-        return redirect('/adverts')->with('message', config('app.advert_deleted'));
+        return redirect('/')->with('message', config('app.advert_deleted'));
     }
 }

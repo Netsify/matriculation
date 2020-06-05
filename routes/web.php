@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => true]);
 
-Route::resource('/', 'IndexController')->only([
-    'index'
-]);
+Route::get('/', 'AdvertController@index')->name('adverts.index');
 
-Route::resource('adverts', 'AdvertController');
+Route::post('/', 'AdvertController@store')->name('adverts.store');
+
+Route::resource('adverts', 'AdvertController')->except(['index', 'store']);
 
 Route::resource('profile', 'ProfileController')->only([
     'index', 'store'
@@ -28,3 +28,5 @@ Route::resource('profile', 'ProfileController')->only([
 Route::get('/documents', 'DocumentController@index')->name('documents.index');
 
 Route::post('/documents/upload', 'DocumentController@upload')->name('documents.upload');
+
+Route::get('/users', 'UserController@index')->name('users.index');

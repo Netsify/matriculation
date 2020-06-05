@@ -56,10 +56,10 @@ class ProfileController extends Controller
         $this->profileRepository->updateOrCreateProfile(
             ['user_id' => \Auth::id()],
             ['school' => $request->school,
-            'graduation_year' => $request->graduation_year,
-            'citizenship' => $request->citizenship,
-            'city' => $request->city,
-            'address' => $request->address]
+                'graduation_year' => $request->graduation_year,
+                'citizenship' => $request->citizenship,
+                'city' => $request->city,
+                'address' => $request->address]
         );
 
         return redirect('profile')->with('message', config('app.profile_saved'));

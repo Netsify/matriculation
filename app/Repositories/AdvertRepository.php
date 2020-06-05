@@ -35,6 +35,22 @@ class AdvertRepository extends BaseRepository
      */
     public function createAdvert($inputs)
     {
-        $this->model->create($inputs)->save();
+        $this->model->create([
+            'title' => $inputs['title'],
+            'body' => $inputs['body']
+        ])->save();
+    }
+
+    /**
+     * Update an advert.
+     *
+     * @param array $inputs
+     * @return void
+     */
+    public function updateAdvert($inputs, $advert)
+    {
+        $advert->title = $inputs['title'];
+        $advert->body = $inputs['body'];
+        $advert->save();
     }
 }
