@@ -26,9 +26,8 @@ class UserService
         return $this->userService->with('profile')->get();
     }
 
-    public function getFullName()
-    {
-        return $this->userService->surname . ' ' . $this->userService->name . ' ' . $this->userService->patronymic;
-    }
-
+//    public function getFullName()
+//    {
+//        return $this->userService->surname . ' ' . $this->userService->name . ' ' . $this->userService->patronymic;
+//    }
 }

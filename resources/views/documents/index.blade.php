@@ -23,8 +23,8 @@
             </div>
 
             <div class="card-body">
-                <form action="{{ route('documents.upload') }}" method="post" enctype="multipart/form-data">
-                    {{ csrf_field() }}
+                <form action="{{ route('documents.store') }}" method="post" enctype="multipart/form-data">
+                    @csrf
 
                     <div class="form-group">
                         <label for="certificate">Аттестат</label>

@@ -34,7 +34,12 @@
                                     <td>{{$user->patronymic}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->created_at}}</td>
-                                    <td><a href="{{route('profiles.show', $user->id)}}">Профиль</a></td>
+                                    <td><a href="{{ route('profiles.show', $user->profile->id) }}">Профиль</a></td>
+                                    <td>
+                                        @foreach($user->document as $document)
+                                            <a href="{{ route('documents.show', $document->id) }}">Документы</a>
+                                        @endforeach
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

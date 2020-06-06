@@ -25,14 +25,14 @@ class DocumentRepository extends BaseRepository
      * @param File $value
      * @return void
      */
-    public function createDocument($key, $file)
+    public function createDocument($directory, $file)
     {
         $this->model->create([
             'user_id' => \Auth::id(),
             'document_type_id' => 1,
             'hash_name' => pathinfo($file->hashName(),PATHINFO_FILENAME),
             'name' => pathinfo($file->getClientOriginalName(),PATHINFO_FILENAME),
-            'path' => $file->store($key, 'public'),
+            'path' => $file->store($directory, 'public'),
         ])->save();
     }
 }
