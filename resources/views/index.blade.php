@@ -40,7 +40,7 @@
                                 <form style="margin: 19px;" action="{{ route('adverts.destroy', $advert->id) }}" method="post">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger" type="submit">Удалить</button>
+                                    <button class="btn btn-danger" type="submit" onclick="return confirm('Вы уверены?')">Удалить</button>
                                 </form>
                             </div>
                         </div>

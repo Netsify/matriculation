@@ -33,7 +33,7 @@ class ProfileController extends Controller
     {
         $profile = $this->profileRepository->getCurrentProfile();
 
-        return view('profile', compact('profile'));
+        return view('profiles.index', compact('profile'));
     }
 
     /**
@@ -62,11 +62,13 @@ class ProfileController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|View
      */
     public function show($id)
     {
-        //
+        $profile = $this->profileRepository->getById($id);
+
+        return view('profiles.show', compact('profile'));
     }
 
     /**

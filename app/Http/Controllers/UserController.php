@@ -37,6 +37,6 @@ class UserController extends Controller
 
 //        $users->name = $this->userService->getFullName();
 
-        return view('user', compact('users'));
+        return view('admin.user', compact('users'));
     }
 }

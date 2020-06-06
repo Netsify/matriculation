@@ -19,12 +19,14 @@ Route::get('/', 'AdvertController@index')->name('adverts.index');
 
 Route::post('/', 'AdvertController@store')->name('adverts.store');
 
-Route::resource('adverts', 'AdvertController')->except(['index', 'store']);
+Route::resource('/adverts', 'AdvertController')->except(['index', 'store']);
 
-Route::resource('profile', 'ProfileController')->only(['index', 'store']);
+Route::get('/profile', 'ProfileController@index')->name('profiles.index');
+
+Route::resource('/profiles', 'ProfileController')->only(['show', 'store']);
 
 Route::get('/documents', 'DocumentController@index')->name('documents.index');
 
 Route::post('/documents/upload', 'DocumentController@upload')->name('documents.upload');
 
-Route::get('/users', 'UserController@index')->name('users.index');
+Route::get('/admin/users', 'UserController@index')->name('users.index');
