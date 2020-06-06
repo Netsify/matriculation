@@ -15,7 +15,9 @@
                 <br />
             @endif
 
-            <form method="post" action="{{ route('profile.store') }}">
+            <h3 align="center">Редактирование анкеты</h3>
+
+            <form method="post" action="{{ route('profiles.update', $profile->id) }}">
                 @csrf
                 <div class="form-group">
                     <label for="school">Школа:</label>

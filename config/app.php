@@ -3,7 +3,8 @@
 return [
 
     //custom constants
-    'profile_saved' => 'Анкета сохранена',
+    'profile_added' => 'Анкета добавлена',
+    'profile_updated' => 'Анкета обновлена',
 
     'advert_added' => 'Объявление добавлено',
     'advert_updated' => 'Объявление обновлено',

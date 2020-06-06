@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6932629c-15bd-406b-9a47-6ff078954730" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/pagination.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/config/mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/autoload.php" afterDir="false" />
@@ -17,14 +15,10 @@
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/composer/autoload_static.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/composer/installed.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ProfileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ProfileRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profiles/index.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +194,7 @@
       <workItem from="1591247593073" duration="49000" />
       <workItem from="1591247656601" duration="16516000" />
       <workItem from="1591328323437" duration="27130000" />
-      <workItem from="1591419936765" duration="4692000" />
+      <workItem from="1591419936765" duration="8342000" />
     </task>
     <servers />
   </component>

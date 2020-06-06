@@ -33,7 +33,7 @@ class ProfileController extends Controller
     {
         $profile = $this->profileRepository->getCurrentProfile();
 
-        return view('profiles.index', compact('profile'));
+        return $profile ? view('profiles.edit', compact('profile')) : view('profiles.create');
     }
 
     /**
@@ -53,9 +53,9 @@ class ProfileController extends Controller
      */
     public function store(ProfileRequest $request)
     {
-        $this->profileRepository->updateOrCreateProfile($request->all());
+        $this->profileRepository->createProfile($request->all());
 
-        return back()->with('message', config('app.profile_saved'));
+        return back()->with('message', config('app.profile_added'));
     }
 
     /**
@@ -87,11 +87,15 @@ class ProfileController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(ProfileRequest $request, $id)
     {
-        //
+        $profile = $this->profileRepository->getById($id);
+
+        $this->profileRepository->updateProfile($request->all(), $profile);
+
+        return back()->with('message', config('app.profile_updated'));
     }
 
     /**

@@ -19,22 +19,39 @@ class ProfileRepository extends BaseRepository
     }
 
     /**
-     * Create or update a profile.
+     * Create a profile.
      *
      * @param array $check
      * @param array $inputs
      * @return void
      */
-    public function updateOrCreateProfile($inputs)
+    public function createProfile($inputs)
     {
-        $this->model->updateOrCreate(
-            ['user_id' => \Auth::id()],
-            ['school' => $inputs['school'],
+        $this->model->create(
+            ['user_id' => \Auth::id(),
+            'school' => $inputs['school'],
             'graduation_year' => $inputs['graduation_year'],
             'citizenship' => $inputs['citizenship'],
             'city' => $inputs['city'],
             'address' => $inputs['address']
-            ]);
+            ])->save();
+    }
+
+    /**
+     * Update a profile.
+     *
+     * @param array $inputs
+     * @param $profile
+     * @return void
+     */
+    public function updateProfile($inputs, $profile)
+    {
+        $profile->school = $inputs['school'];
+        $profile->graduation_year = $inputs['graduation_year'];
+        $profile->citizenship = $inputs['citizenship'];
+        $profile->city = $inputs['city'];
+        $profile->address = $inputs['address'];
+        $profile->save();
     }
 
     /**

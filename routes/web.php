@@ -23,7 +23,7 @@ Route::resource('/adverts', 'AdvertController')->except(['index', 'store']);
 
 Route::get('/profile', 'ProfileController@index')->name('profiles.index');
 
-Route::resource('/profiles', 'ProfileController')->only(['show', 'store']);
+Route::resource('/profiles', 'ProfileController')->only(['show', 'store', 'update']);
 
 Route::get('/documents', 'DocumentController@index')->name('documents.index');
 
