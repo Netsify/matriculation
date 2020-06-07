@@ -15,12 +15,13 @@ class CreateProfilesTable extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->string('school');
+            $table->integer('user_id')->unsigned();;
+            $table->date('birthday');
+            $table->string('gender', 1);
+            $table->integer('phone');
+            $table->string('address', 100);
+            $table->string('school', 100);
             $table->year('graduation_year');
-            $table->string('citizenship');
-            $table->string('city');
-            $table->string('address');
             $table->timestamps();
         });
     }

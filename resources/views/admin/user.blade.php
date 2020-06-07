@@ -21,7 +21,8 @@
                                 <th scope="col">Email</th>
                                 <th scope="col">Дата регистрации</th>
                                 <th scope="col">Профиль</th>
-                                <th scope="col">Документы</th>
+                                <th scope="col">Аттестат</th>
+                                <th scope="col">Удостоверение личности</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -37,7 +38,9 @@
                                     <td><a href="{{ route('profiles.show', $user->profile->id) }}">Профиль</a></td>
                                     <td>
                                         @foreach($user->document as $document)
-                                            <a href="{{ route('documents.show', $document->id) }}">Документы</a>
+                                            <a href="{{ Storage::url($document->path) }}" download="{{ $document->name }}">
+                                                {{ $document->documentType->title }}
+                                            </a>
                                         @endforeach
                                     </td>
                                 </tr>

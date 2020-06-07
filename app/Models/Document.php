@@ -18,4 +18,14 @@ class Document extends Model
         'name',
         'path',
     ];
+
+    /**
+     * Many to One relation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
+     */
+    public function documentType()
+    {
+        return $this->belongsTo(DocumentType::class);
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DocumentRequest;
 use App\Repositories\DocumentRepository;
+use Illuminate\Support\Facades\Storage;
 
 class DocumentController extends Controller
 {
