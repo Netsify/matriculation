@@ -19,29 +19,40 @@
 
             <form method="post" action="{{ route('profiles.update', $profile->id) }}">
                 @csrf
+
                 <div class="form-group">
-                    <label for="school">Школа:</label>
+                    <label for="birthday">День рождения:</label>
+                    <input type="date" class="form-control" name="birthday" value="{{ $profile->birthday }}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Пол:</label>
+                    <input type="text" class="form-control" name="gender" value="{{ $profile->gender }}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефона:</label>
+                    <input type="number" class="form-control" name="phone" value="{{ $profile->phone }}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Адрес:</label>
+                    <input type="text" class="form-control" name="address" value="{{ $profile->address }}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="school">Окончил(а) учебное заведение:</label>
                     <input type="text" class="form-control" name="school" value="{{ $profile->school }}" />
                 </div>
 
                 <div class="form-group">
                     <label for="graduation_year">Год окончания:</label>
-                    <input type="text" class="form-control" name="graduation_year" value="{{ $profile->graduation_year }}" />
+                    <input type="date" class="form-control" name="graduation_year" value="{{ $profile->graduation_year }}" />
                 </div>
 
-                <div class="form-group">
-                    <label for="citizenship">Гражданство:</label>
-                    <input type="text" class="form-control" name="citizenship" value="{{ $profile->citizenship }}" />
+                <div align="center">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
                 </div>
-                <div class="form-group">
-                    <label for="city">Город:</label>
-                    <input type="text" class="form-control" name="city" value="{{ $profile->city }}" />
-                </div>
-                <div class="form-group">
-                    <label for="address">Адрес:</label>
-                    <input type="text" class="form-control" name="address" value="{{ $profile->address }}" />
-                </div>
-                <button type="submit" class="btn btn-primary">Сохранить</button>
             </form>
         </div>
 

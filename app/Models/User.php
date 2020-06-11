@@ -59,8 +59,28 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @return \Illuminate\Database\Eloquent\Relations\hasMany
      */
-    public function document()
+    public function documents()
     {
         return $this->hasMany(Document::class);
+    }
+
+    /**
+     * One to Many relation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function role()
+    {
+        return $this->belongsTo('App\Models\Role');
+    }
+
+    /**
+     * Advert operations access
+     *
+     * @return bool
+     */
+    public function accessAdvertOperations()
+    {
+        return $this->role->slug != 'user';
     }
 }

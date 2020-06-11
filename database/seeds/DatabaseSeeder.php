@@ -6,6 +6,8 @@ use App\Services\LoremIpsumGenerator;
 use App\Models\DocumentType;
 use App\Models\Advert;
 use App\Models\User;
+use App\Models\Role;
+use App\Models\Profile;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,14 +22,44 @@ class DatabaseSeeder extends Seeder
 
         $lipsum = new LoremIpsumGenerator;
 
-        DocumentType::create([
-            'title' => 'Аттестат',
-            'slug' => 'cert'
+        Role::create([
+            'title' => 'Администратор',
+            'slug' => 'admin'
+        ]);
+
+        Role::create([
+            'title' => 'Модератор',
+            'slug' => 'moder'
+        ]);
+
+        Role::create([
+            'title' => 'Пользователь',
+            'slug' => 'user'
         ]);
 
         DocumentType::create([
-            'title' => 'Удостоверение личности',
+            'title' => 'Документ, удостоверяющий личность поступающего',
             'slug' => 'pass'
+        ]);
+
+        DocumentType::create([
+            'title' => 'Документ об образовании (аттестат)',
+            'slug' => 'edu'
+        ]);
+
+        DocumentType::create([
+            'title' => 'Медицинская справка № 086-У',
+            'slug' => 'med'
+        ]);
+
+        DocumentType::create([
+            'title' => 'Фотокарточка размером 3х4',
+            'slug' => 'photo'
+        ]);
+
+        DocumentType::create([
+            'title' => 'Приписное свидетельство (для юношей)',
+            'slug' => 'mil'
         ]);
 
         Advert::create([
@@ -57,6 +89,7 @@ class DatabaseSeeder extends Seeder
             'first_name' => 'Бузанов',
             'middle_name' => 'Азамат',
             'last_name' => 'Аскарович',
+            'role_id' => 1,
             'password' => bcrypt('123'),
             'email' => 'azbuzanov@gmail.com',
         ]);
@@ -65,8 +98,18 @@ class DatabaseSeeder extends Seeder
             'IIN' => '000000000000',
             'first_name' => 'Wrigley',
             'middle_name' => 'Cate',
+            'role_id' => 2,
             'password' => bcrypt('123'),
             'email' => 'wrigley@gmail.com',
+        ]);
+
+        User::create([
+            'IIN' => '111111111111',
+            'first_name' => 'Rowen',
+            'middle_name' => 'Matthew',
+            'role_id' => 3,
+            'password' => bcrypt('123'),
+            'email' => 'rowen@gmail.com',
         ]);
 
         Profile::create([
@@ -74,8 +117,8 @@ class DatabaseSeeder extends Seeder
             'birthday' => '2020-04-07',
             'gender' => 'М',
             'phone' => '87900000000',
-            'address' => $lipsum->getContent(40),
-            'school' => $lipsum->getContent(30),
+            'address' => '672 Jefferson St Sainte Genevieve, Missouri(MO), 63670',
+            'school' => 'Spring Gardens Grammar School',
             'graduation_year' => 2020
         ]);
 
@@ -84,8 +127,8 @@ class DatabaseSeeder extends Seeder
             'birthday' => '2020-11-21',
             'gender' => 'Ж',
             'phone' => '84511100000',
-            'address' => $lipsum->getContent(40),
-            'school' => $lipsum->getContent(30),
+            'address' => 'Po Box 2588 Silverthorne, Colorado(CO), 80498',
+            'school' => 'Green Valley Middle School',
             'graduation_year' => 2019
         ]);
     }

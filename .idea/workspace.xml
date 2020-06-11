@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6932629c-15bd-406b-9a47-6ff078954730" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../bestmomo/.idea/bestmomo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/config/mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/autoload.php" afterDir="false" />
@@ -16,16 +15,22 @@
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/composer/autoload_real.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/composer/autoload_static.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_26_094338_create_profiles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_26_094338_create_profiles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_04_112959_create_document_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_04_112959_create_document_types_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_04_125528_create_documents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_04_125528_create_documents_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/Git.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/documents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/documents/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profiles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profiles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,14 +173,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Services" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Models" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\documents" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\admin" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\profiles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Services" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -207,7 +212,12 @@
       <workItem from="1591247656601" duration="16516000" />
       <workItem from="1591328323437" duration="27130000" />
       <workItem from="1591419936765" duration="16254000" />
-      <workItem from="1591506080014" duration="21722000" />
+      <workItem from="1591506080014" duration="22275000" />
+      <workItem from="1591586930350" duration="28469000" />
+      <workItem from="1591675010549" duration="13151000" />
+      <workItem from="1591761210583" duration="10865000" />
+      <workItem from="1591803061646" duration="9686000" />
+      <workItem from="1591847408620" duration="14380000" />
     </task>
     <servers />
   </component>
@@ -227,13 +237,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="246" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1591385318746" />
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1591510559245">
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1591850107141">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591510559245" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1591253756941">
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591850107141" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1591591976987">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1591253756941" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1591591976987" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591867953684">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591867953684" />
   </component>
 </project>

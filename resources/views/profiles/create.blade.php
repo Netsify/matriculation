@@ -19,28 +19,37 @@
 
             <form method="post" action="{{ route('profiles.store') }}">
                 @csrf
+
                 <div class="form-group">
-                    <label for="school">Школа:</label>
+                    <label for="birthday">День рождения:</label>
+                    <input type="date" class="form-control" name="birthday" />
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Пол:</label>
+                    <input type="text" class="form-control" name="gender" />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефона:</label>
+                    <input type="number" class="form-control" name="phone" />
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Адрес:</label>
+                    <input type="text" class="form-control" name="address" />
+                </div>
+
+                <div class="form-group">
+                    <label for="school">Выпустился из (название учебного заведения):</label>
                     <input type="text" class="form-control" name="school" />
                 </div>
 
                 <div class="form-group">
                     <label for="graduation_year">Год окончания:</label>
-                    <input type="text" class="form-control" name="graduation_year" />
+                    <input type="date" class="form-control" name="graduation_year" />
                 </div>
 
-                <div class="form-group">
-                    <label for="citizenship">Гражданство:</label>
-                    <input type="text" class="form-control" name="citizenship" />
-                </div>
-                <div class="form-group">
-                    <label for="city">Город:</label>
-                    <input type="text" class="form-control" name="city" />
-                </div>
-                <div class="form-group">
-                    <label for="address">Адрес:</label>
-                    <input type="text" class="form-control" name="address" />
-                </div>
                 <button type="submit" class="btn btn-primary">Сохранить</button>
             </form>
         </div>
