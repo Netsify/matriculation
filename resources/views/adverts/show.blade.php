@@ -11,8 +11,8 @@
                     </div>
 
                     <div class="card-body">
-                        <p class="card-text"> {{ $advert->body }} </p>
-                        <div align="right"> {{ $advert->updated_at }} </div>
+                        <p class="card-text"> {!! $advert->body !!} </p>
+                        <div align="right"> {{ $advert->updated_at->format('j M H:i') }} </div>
                     </div>
                 </div>
 

@@ -13,32 +13,13 @@ class Advert extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-//    protected $dates = ['updated_at'];
-
-    /**
-     * The storage format of the model's date columns.
-     *
-     * @var string
-     */
-//    protected $dateFormat = 'd-m-Y';
-//
-//    public function getUpdatedAtAttribute($date)
-//    {
-//        return $date->format('m-d');
-//    }
-
-    /**
      * Get the adverts's body first sentence.
      *
-     * @param  string  $body
+     * @param  string  $text
      * @return string
      */
-    public function getBodyAttribute($body)
+    public function getBodySentenceAttribute()
     {
-        return preg_replace('/(.*?[?!.](?=\s|$)).*/', '\\1', $body);
+        return explode('.', $this->body)[0] . '...';
     }
 }

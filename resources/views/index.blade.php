@@ -25,10 +25,10 @@
                                     <a href="{{ route('adverts.show', $advert->id)}}"><h2> {{ $advert->title }} </h2></a>
                                 </div>
                                 <div class="card-text">
-                                    {!! $advert->body !!}
+                                    {!! $advert->body_sentence !!}
                                 </div>
                                 <div align="right">
-                                    {{ $advert->updated_at }}
+                                    {{ $advert->updated_at->format('j M H:i') }}
                                 </div>
                             </div>
                         </div>
