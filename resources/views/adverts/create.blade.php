@@ -15,7 +15,7 @@
                 <br />
             @endif
 
-            <form method="post" action="{{ route('adverts.store') }}">
+            <form action="{{ route('adverts.store') }}" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="title">Заголовок:</label>

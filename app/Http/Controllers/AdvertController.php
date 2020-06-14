@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\AdvertRepository;
 use App\Http\Requests\AdvertRequest;
+use App\Repositories\CommentRepository;
 
 class AdvertController extends Controller
 {
@@ -13,14 +14,21 @@ class AdvertController extends Controller
     private $advertRepository;
 
     /**
+     * @var CommentRepository
+     */
+    private $commentRepository;
+
+    /**
      * Create a new controller instance.
      *
      * @param AdvertRepository $advertRepository
+     * @param CommentRepository $commentRepository
      */
-    public function __construct(AdvertRepository $advertRepository)
+    public function __construct(AdvertRepository $advertRepository, CommentRepository $commentRepository)
     {
         $this->middleware('auth');
         $this->advertRepository = $advertRepository;
+        $this->commentRepository = $commentRepository;
     }
 
     /**
@@ -67,8 +75,9 @@ class AdvertController extends Controller
     public function show($id)
     {
         $advert = $this->advertRepository->getById($id);
+        $comments = $this->commentRepository->getAdvertComments($id);
 
-        return view('adverts.show', compact('advert'));
+        return view('adverts.show', compact('advert', 'comments'));
     }
 
     /**

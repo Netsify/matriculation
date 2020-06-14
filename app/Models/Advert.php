@@ -22,4 +22,14 @@ class Advert extends Model
     {
         return explode('.', $this->body)[0] . '...';
     }
+
+    /**
+     * One to Many relation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

@@ -2,7 +2,8 @@
 
 namespace App\Repositories;
 
-abstract class BaseRepository {
+abstract class BaseRepository
+{
 
     /**
      * The Model instance.

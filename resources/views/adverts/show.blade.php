@@ -16,6 +16,32 @@
                     </div>
                 </div>
 
+{{--                @include('comments.index')--}}
+                @foreach($comments as $comment)
+                    <div class="card-body">
+                        <textarea class="form-control" rows="8" name="body">{!! $comment->body !!}</textarea>
+                    </div>
+                @endforeach
+
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"> Оставьте комментарий </h4>
+                    </div>
+
+                    <form action="{{ route('comments.store') }}" method="post">
+                        @csrf
+                        <div class="card-body">
+                            <textarea class="form-control" rows="8" name="body"></textarea>
+
+                            <input type="hidden" name="advert_id" value="{{ $advert->id }}" />
+                            <br>
+                            <button class="btn btn-primary" type="submit">Отправить</button>
+                        </div>
+
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>

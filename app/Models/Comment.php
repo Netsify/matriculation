@@ -30,6 +30,6 @@ class Comment extends Model
      */
     public function advert()
     {
-        return $this->belongsTo (Advert::class);
+        return $this->belongsTo(Advert::class);
     }
 }
