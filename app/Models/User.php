@@ -74,6 +74,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo('App\Models\Role');
     }
 
+    //    public function getFullName()
+//    {
+//        return $this->userService->surname . ' ' . $this->userService->name . ' ' . $this->userService->patronymic;
+//    }
+
     /**
      * Advert operations access
      *

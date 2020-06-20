@@ -2,34 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\UserService;
+use App\Repositories\UserRepository;
 
 class UserController extends Controller
 {
     /**
-     * @var UserService
+     * @var UserRepository
      */
-    private $userService;
+    private $userRepository;
 
     /**
      * Create a new controller instance.
      *
-     * @param UserService $userService
+     * @param UserRepository $userRepository
      */
-    public function __construct(UserService $userService)
+    public function __construct(UserRepository $userRepository)
     {
         $this->middleware('auth');
-        $this->userService = $userService;
+        $this->userRepository = $userRepository;
     }
 
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View
      */
     public function index()
     {
-        $users = $this->userService->getAllUsersInfo();
+        $users = $this->userRepository->getAllUsersInfo();
 //        $users = User::with('profile')->get();
 
 //        $users->name = $this->userService->getFullName();

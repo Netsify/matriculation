@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6932629c-15bd-406b-9a47-6ff078954730" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../bestmomo/.idea/bestmomo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/config/mail.php" afterDir="false" />
@@ -2397,18 +2396,16 @@
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/src/Assert.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/src/Assert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/tests/AssertTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo55/database/migrations/2018_08_31_172300_add_confirmation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/matriculation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/matriculation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdvertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Advert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adverts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/adverts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comments/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -2554,17 +2551,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Services" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Repositories" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Models" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\documents" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\admin" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\profiles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Services" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -2609,6 +2607,9 @@
       <workItem from="1592121577421" duration="2086000" />
       <workItem from="1592141838760" duration="3747000" />
       <workItem from="1592155030609" duration="1434000" />
+      <workItem from="1592548209569" duration="8193000" />
+      <workItem from="1592573065138" duration="568000" />
+      <workItem from="1592630327866" duration="3212000" />
     </task>
     <servers />
   </component>
@@ -2628,6 +2629,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="531" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1591554799324" />
+    <state x="738" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592635265635">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="738" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1592635265635" />
     <state x="499" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591990195630">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -2648,14 +2653,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="246" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1591990103079" />
-    <state x="181" y="95" key="SettingsEditor" timestamp="1592156445990">
+    <state x="181" y="95" key="SettingsEditor" timestamp="1592548731065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="181" y="95" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592156445990" />
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1592155033452">
+    <state x="181" y="95" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592548731065" />
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1592630481147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592155033452" />
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592630481147" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1591591976987">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
