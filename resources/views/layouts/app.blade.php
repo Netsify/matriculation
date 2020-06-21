@@ -26,13 +26,7 @@
         <main class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-3">
-                        @include('layouts.menu')
-                    </div>
-
-                    <div class="col-md-9">
-                        @yield('content')
-                    </div>
+                    @yield('content')
                 </div>
             </div>
         </main>

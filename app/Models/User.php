@@ -74,18 +74,28 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo('App\Models\Role');
     }
 
-    //    public function getFullName()
-//    {
-//        return $this->userService->surname . ' ' . $this->userService->name . ' ' . $this->userService->patronymic;
-//    }
-
     /**
-     * Advert operations access
+     * Administrator operations access
      *
      * @return bool
      */
-    public function accessAdvertOperations()
+    public function accessAdministration()
     {
-        return $this->role->slug != 'user';
+        return $this->role->slug === 'admin';
+    }
+
+    /**
+     * Administrator and moderator operations access
+     *
+     * @return bool
+     */
+    public function accessModeration()
+    {
+        return $this->role->slug !== 'user';
+    }
+
+    public function getFullName()
+    {
+        return "{$this->first_name} {$this->middle_name} {$this->last_name}";
     }
 }

@@ -15,9 +15,10 @@ class CheckAdvertRole
      */
     public function handle($request, Closure $next)
     {
-        if (\Auth::user()->accessAdvertOperations())
+        if (\Auth::user()->accessModeration()) {
             return $next($request);
-        else
+        } else {
             abort(404);
+        }
     }
 }

@@ -1,21 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
+    <div class="col-md-3">
+        @include('layouts.menu')
+    </div>
 
-        <div class="col-sm-8 offset-sm-2">
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            <br />
-            @endif
-
-            <form method="post" action="{{ route('adverts.update', $advert->id) }}">
+    <div class="col-md-9">
+        <div class="card">
+            <form action="{{ route('adverts.update', $advert->id) }}" method="post">
                 @method('PATCH')
                 @csrf
                 <div class="form-group">
@@ -32,14 +24,24 @@
             </form>
         </div>
 
-        <div class="col-sm-12">
+        <div class="col-sm-8 offset-sm-2">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </div>
 
+        <div class="col-sm-12">
             @if(session()->get('message'))
                 <div class="alert alert-success">
                     {{ session()->get('message') }}
                 </div>
             @endif
         </div>
-
     </div>
 @endsection

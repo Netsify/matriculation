@@ -8,6 +8,7 @@ use App\Models\Advert;
 use App\Models\User;
 use App\Models\Role;
 use App\Models\Profile;
+use App\Models\Menu;
 
 class DatabaseSeeder extends Seeder
 {

@@ -30,8 +30,8 @@ class DocumentRepository extends BaseRepository
         $this->model->create([
             'user_id' => \Auth::id(),
             'document_type_id' => 1,
-            'hash_name' => pathinfo($file->hashName(),PATHINFO_FILENAME),
-            'name' => pathinfo($file->getClientOriginalName(),PATHINFO_FILENAME),
+            'hash_name' => pathinfo($file->hashName(), PATHINFO_FILENAME),
+            'name' => pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME),
             'path' => $file->store($directory, 'public'),
         ])->save();
     }
