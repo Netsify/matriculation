@@ -6,32 +6,41 @@
     </div>
 
     <div class="col-md-9">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title"> {{ $advert->title }} </h4>
+        <div class="card border-info mb-5">
+            <div class="card-header border-info">
+                <div class="d-flex align-items-center justify-content-center">
+                    {{ $advert->title }}
+                </div>
             </div>
 
             <div class="card-body">
-                <p class="card-text"> {!! $advert->body !!} </p>
-                <div align="right"> {{ $advert->updated_at->format('j M H:i') }} </div>
+                {!! $advert->body !!}
+                <div class="float-right">
+                    {{ $advert->updated_at->format('j M H:i') }}
+                </div>
             </div>
         </div>
 
         @include('comments.index')
 
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Оставьте комментарий</h4>
+        <div class="card border-info mb-5">
+            <div class="card-header border-info">
+                <div class="d-flex align-items-center justify-content-center">
+                    Оставьте комментарий
+                </div>
             </div>
 
             <form action="{{ route('comments.store') }}" method="post">
                 @csrf
                 <div class="card-body">
-                    <textarea class="form-control" rows="8" name="body"></textarea>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="8" name="body"></textarea>
+                    </div>
 
                     <input type="hidden" name="advert_id" value="{{ $advert->id }}" />
-                    <br>
-                    <button class="btn btn-primary" type="submit">Отправить</button>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-primary" type="submit">Сохранить</button>
+                    </div>
                 </div>
             </form>
         </div>

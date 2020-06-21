@@ -7,7 +7,7 @@
 
     <div class="col-md-9">
         <div class="card border-info">
-            <div class="card-header">
+            <div class="card-header border-info">
                 <div class="d-flex align-items-center justify-content-center">
                     Доска объявлений
                 </div>

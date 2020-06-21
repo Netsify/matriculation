@@ -29,12 +29,14 @@ class ProfileRepository extends BaseRepository
     {
         $this->model->create(
             ['user_id' => \Auth::id(),
-            'school' => $inputs['school'],
-            'graduation_year' => $inputs['graduation_year'],
-            'citizenship' => $inputs['citizenship'],
-            'city' => $inputs['city'],
-            'address' => $inputs['address']
-            ])->save();
+            'birthday' => $inputs['birthday'],
+            'gender' => $inputs['gender'],
+            'phone' => $inputs['phone'],
+            'address' => $inputs['address'],
+            'graduation_inst' => $inputs['graduation_inst'],
+            'graduation_date' => $inputs['graduation_date'],
+            ]
+        )->save();
     }
 
     /**
@@ -46,11 +48,12 @@ class ProfileRepository extends BaseRepository
      */
     public function updateProfile($inputs, $profile)
     {
-        $profile->school = $inputs['school'];
-        $profile->graduation_year = $inputs['graduation_year'];
-        $profile->citizenship = $inputs['citizenship'];
-        $profile->city = $inputs['city'];
+        $profile->birthday = $inputs['birthday'];
+        $profile->gender = $inputs['gender'];
+        $profile->phone = $inputs['phone'];
         $profile->address = $inputs['address'];
+        $profile->graduation_inst = $inputs['graduation_inst'];
+        $profile->graduation_date = $inputs['graduation_date'];
         $profile->save();
     }
 

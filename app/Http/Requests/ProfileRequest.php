@@ -24,8 +24,8 @@ class ProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'school'=>'required',
-            'graduation_year'=>'required'
+            'graduation_inst'=>'required',
+            'graduation_date'=>'required'
         ];
     }
 }

@@ -119,8 +119,8 @@ class DatabaseSeeder extends Seeder
             'gender' => 'М',
             'phone' => '87900000000',
             'address' => '672 Jefferson St Sainte Genevieve, Missouri(MO), 63670',
-            'school' => 'Spring Gardens Grammar School',
-            'graduation_year' => 2020
+            'graduation_inst' => 'Spring Gardens Grammar School',
+            'graduation_date' => '2020-11-21'
         ]);
 
         Profile::create([
@@ -129,8 +129,8 @@ class DatabaseSeeder extends Seeder
             'gender' => 'Ж',
             'phone' => '84511100000',
             'address' => 'Po Box 2588 Silverthorne, Colorado(CO), 80498',
-            'school' => 'Green Valley Middle School',
-            'graduation_year' => 2019
+            'graduation_inst' => 'Green Valley Middle School',
+            'graduation_date' => '2020-04-07'
         ]);
     }
 }

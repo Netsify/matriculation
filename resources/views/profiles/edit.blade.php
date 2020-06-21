@@ -7,14 +7,15 @@
 
     <div class="col-md-9">
         <div class="card border-info">
-            <div class="card-header">
+            <div class="card-header border-info">
                 <div class="d-flex align-items-center justify-content-center">
                     Редактирование анкеты
                 </div>
             </div>
 
             <div class="card-body">
-                <form method="post" action="{{ route('profiles.update', $profile->id) }}">
+                <form action="{{ route('profiles.update', $profile->id) }}" method="POST">
+                    @method('PATCH')
                     @csrf
 
                     <div class="form-group">
@@ -23,9 +24,17 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="gender">Пол:</label>
-                        <input type="text" class="form-control" name="gender" value="{{ $profile->gender }}" />
+                        <label>Пол:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genderM" id="genderM">
+                            <label class="form-check-label" for="genderM">М</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genderW" id="genderW">
+                            <label class="form-check-label" for="genderW">Ж</label>
+                        </div>
                     </div>
+{{--                        <input type="text" class="form-control" name="gender" value="{{ $profile->gender }}" />--}}
 
                     <div class="form-group">
                         <label for="phone">Номер телефона:</label>
@@ -38,16 +47,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="school">Окончил(а) учебное заведение:</label>
-                        <input type="text" class="form-control" name="school" value="{{ $profile->school }}" />
+                        <label for="graduation_inst">Окончил(а) учебное заведение:</label>
+                        <input type="text" class="form-control" name="graduation_inst" value="{{ $profile->graduation_inst }}" />
                     </div>
 
                     <div class="form-group">
-                        <label for="graduation_year">Год окончания:</label>
-                        <input type="date" class="form-control" name="graduation_year" value="{{ $profile->graduation_year }}" />
+                        <label for="graduation_year">Дата окончания:</label>
+                        <input type="date" class="form-control" name="graduation_date" value="{{ $profile->graduation_date }}" />
                     </div>
 
-                    <div align="center">
+                    <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-primary">Сохранить</button>
                     </div>
                 </form>
@@ -55,19 +64,16 @@
 
             <div class="col-sm-8 offset-sm-2">
                 @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <br />
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger d-flex align-items-center justify-content-center mb-2">
+                            {{ $error }}
+                        </div>
+                    @endforeach
                 @endif
 
                 <div class="col-sm-12">
                     @if(session()->get('message'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success d-flex align-items-center justify-content-center mb-2">
                             {{ session()->get('message') }}
                         </div>
                     @endif

@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+    <div class="col-md-3">
+        @include('layouts.menu')
+    </div>
 
+    <div class="col-md-9">
+        <div class="card border-info">
+            <div class="card-header border-info">
+                <div class="d-flex align-items-center justify-content-center">
+                    Просмотр анкеты
+                </div>
+            </div>
+
+            <div class="card-body">
                 <div class="form-group">
                     <label for="birthday">День рождения:</label>
                     <input type="date" class="form-control" name="birthday" value="{{ $profile->birthday }}" />
@@ -26,15 +35,14 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="school">Окончил(а) учебное заведение:</label>
-                    <input type="text" class="form-control" name="school" value="{{ $profile->school }}" />
+                    <label for="graduation_inst">Окончил(а) учебное заведение:</label>
+                    <input type="text" class="form-control" name="graduation_inst" value="{{ $profile->graduation_inst }}" />
                 </div>
 
                 <div class="form-group">
                     <label for="graduation_year">Год окончания:</label>
                     <input type="date" class="form-control" name="graduation_year" value="{{ $profile->graduation_year }}" />
                 </div>
-
             </div>
         </div>
     </div>

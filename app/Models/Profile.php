@@ -8,11 +8,12 @@ class Profile extends Model
 {
     protected $fillable = [
         'user_id',
-        'school',
-        'graduation_year',
-        'citizenship',
-        'city',
+        'birthday',
+        'gender',
+        'phone',
         'address',
+        'graduation_inst',
+        'graduation_date'
     ];
 
     /**
