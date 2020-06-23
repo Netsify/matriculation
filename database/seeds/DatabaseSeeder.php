@@ -8,7 +8,7 @@ use App\Models\Advert;
 use App\Models\User;
 use App\Models\Role;
 use App\Models\Profile;
-use App\Models\Menu;
+use App\Models\Comment;
 
 class DatabaseSeeder extends Seeder
 {
@@ -131,6 +131,60 @@ class DatabaseSeeder extends Seeder
             'address' => 'Po Box 2588 Silverthorne, Colorado(CO), 80498',
             'graduation_inst' => 'Green Valley Middle School',
             'graduation_date' => '2020-04-07'
+        ]);
+
+        Comment::create([
+            'user_id' => 1,
+            'advert_id' => 1,
+            'body' => $lipsum->getContent(20),
+        ]);
+
+        Comment::create([
+            'user_id' => 2,
+            'advert_id' => 1,
+            'body' => $lipsum->getContent(10),
+        ]);
+
+        Comment::create([
+            'user_id' => 3,
+            'advert_id' => 1,
+            'body' => $lipsum->getContent(15),
+        ]);
+
+        Comment::create([
+            'user_id' => 1,
+            'advert_id' => 2,
+            'body' => $lipsum->getContent(20),
+        ]);
+
+        Comment::create([
+            'user_id' => 2,
+            'advert_id' => 2,
+            'body' => $lipsum->getContent(10),
+        ]);
+
+        Comment::create([
+            'user_id' => 3,
+            'advert_id' => 2,
+            'body' => $lipsum->getContent(15),
+        ]);
+
+        Comment::create([
+            'user_id' => 1,
+            'advert_id' => 3,
+            'body' => $lipsum->getContent(20),
+        ]);
+
+        Comment::create([
+            'user_id' => 2,
+            'advert_id' => 3,
+            'body' => $lipsum->getContent(10),
+        ]);
+
+        Comment::create([
+            'user_id' => 3,
+            'advert_id' => 3,
+            'body' => $lipsum->getContent(15),
         ]);
     }
 }
