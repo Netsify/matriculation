@@ -27,4 +27,14 @@ class Document extends Model
     {
         return $this->belongsTo(DocumentType::class);
     }
+
+    /**
+     * Many to One relation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

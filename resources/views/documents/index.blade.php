@@ -19,50 +19,19 @@
                         <form action="{{ route('documents.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
 
-                            <div class="card mb-3 border-info">
-                                <div class="card-header align-content-center">
-                                    Документ, удостоверяющий личность
+                            @foreach($documentTypes as $documentType)
+{{--                                @foreach($documentType->documents as $document)--}}
+                                <div class="card mb-3 border-info">
+                                    <div class="card-header align-content-center">
+                                        {{ $documentType->title }}
+                                    </div>
+                                    <div class="card-body d-flex justify-content-between">
+                                        <input type="file" name="{{ "{$documentType->slug}{$documentType->id}" }}">
+{{--                                        {{ $document ? "Документ загружен: {$document->created_at->format('j M H:i')}" : 'Документ отсутствует' }}--}}
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <input type="file" name="pass">
-                                </div>
-                            </div>
-
-                            <div class="card mb-3 border-info">
-                                <div class="card-header align-content-center">
-                                    Документ об образовании (аттестат)
-                                </div>
-                                <div class="card-body">
-                                    <input type="file" name="cert">
-                                </div>
-                            </div>
-
-                            <div class="card mb-3 border-info">
-                                <div class="card-header align-content-center">
-                                    Медицинская справка № 086-У
-                                </div>
-                                <div class="card-body">
-                                    <input type="file" name="med">
-                                </div>
-                            </div>
-
-                            <div class="card mb-3 border-info">
-                                <div class="card-header align-content-center">
-                                    Фотокарточка размером 3х4
-                                </div>
-                                <div class="card-body">
-                                    <input type="file" name="photo">
-                                </div>
-                            </div>
-
-                            <div class="card mb-3 border-info">
-                                <div class="card-header align-content-center">
-                                    Приписное свидетельство (для юношей)
-                                </div>
-                                <div class="card-body">
-                                    <input type="file" name="mil">
-                                </div>
-                            </div>
+{{--                                @endforeach--}}
+                            @endforeach
 
                             <div class="d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary">Отправить</button>

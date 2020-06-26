@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DocumentRequest;
 use App\Repositories\DocumentRepository;
-use Illuminate\Support\Facades\Storage;
+use App\Models\DocumentType;
 
 class DocumentController extends Controller
 {
@@ -31,7 +31,13 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        return view('documents.index');
+        $documentTypes = DocumentType::all();
+//        dd($document = Document::with('DocumentType')
+//            ->find(\Auth::id())
+//            ->toSql());
+//            ->get());
+
+        return view('documents.index', compact('documentTypes'));
     }
 
     /**
@@ -52,8 +58,12 @@ class DocumentController extends Controller
      */
     public function store(DocumentRequest $request)
     {
-        foreach ($request->file() as $key => $value)
+        /** $key - input-file's name which is document type slug with id
+         * $value - uploaded file's information
+         */
+        foreach ($request->file() as $key => $value) {
             $this->documentRepository->createDocument($key, $value);
+        }
 
         return back();
     }
@@ -106,34 +116,4 @@ class DocumentController extends Controller
     {
         //
     }
-
-    //    public function usefulMethods(DocumentRequest $request)
-//    {
-//        $file = $request->file('document');
-//
-//        //Display File Name
-//        echo 'File Name: '.$file->getClientOriginalName();
-//        echo '<br>';
-//
-//        //Display File Extension
-//        echo 'File Extension: '.$file->getClientOriginalExtension();
-//        echo '<br>';
-//
-//        //Display File Real Path
-//        echo 'File Real Path: '.$file->getRealPath();
-//        echo '<br>';
-//
-//        //Display File Size
-//        echo 'File Size: '.$file->getSize();
-//        echo '<br>';
-//
-//        //Display File Mime Type
-//        echo 'File Mime Type: '.$file->getMimeType();
-//        echo '<br>';
-//
-//        //Move Uploaded File
-//        $destinationPath = 'uploads';
-//        $file->move($destinationPath,$file->getClientOriginalName());
-//        echo $destinationPath;
-//    }
 }

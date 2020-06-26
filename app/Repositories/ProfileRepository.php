@@ -60,7 +60,7 @@ class ProfileRepository extends BaseRepository
     /**
      * Get current profile data.
      *
-     * @return Collection
+     * @return Object
      */
     public function getCurrentProfile()
     {

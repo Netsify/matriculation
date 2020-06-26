@@ -4,6 +4,7 @@
     <list default="true" id="6932629c-15bd-406b-9a47-6ff078954730" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../bestmomo/.idea/bestmomo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bestmomo/app/Repositories/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/app/Repositories/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/config/mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/autoload.php" afterDir="false" />
@@ -2398,24 +2399,15 @@
       <change beforePath="$PROJECT_DIR$/../bestmomo55/database/migrations/2018_08_31_172300_add_confirmation.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adverts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adverts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adverts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comments/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdvertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/DocumentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DocumentType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/DocumentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/DocumentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ProfileRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ProfileRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/documents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/documents/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/documents/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profiles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profiles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -2564,15 +2556,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Services" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Models" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Repositories" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\documents" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\admin" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\profiles" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Services" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -2627,7 +2619,14 @@
       <workItem from="1592798427499" duration="49000" />
       <workItem from="1592798495732" duration="14392000" />
       <workItem from="1592882602552" duration="3242000" />
-      <workItem from="1592890101869" duration="4450000" />
+      <workItem from="1592890101869" duration="11160000" />
+      <workItem from="1592969892206" duration="8000" />
+      <workItem from="1592980357982" duration="8667000" />
+      <workItem from="1593004817969" duration="4509000" />
+      <workItem from="1593055737932" duration="136000" />
+      <workItem from="1593087836420" duration="3946000" />
+      <workItem from="1593141804684" duration="60000" />
+      <workItem from="1593145705082" duration="12986000" />
     </task>
     <servers />
   </component>
@@ -2675,17 +2674,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="181" y="95" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592730566971" />
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1592890107846">
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1593145705929">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1592890107846" />
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593145705929" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1592761242357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1592761242357" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592729953142">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593205280294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592729953142" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593205280294" />
   </component>
 </project>

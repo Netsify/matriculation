@@ -17,9 +17,9 @@ Auth::routes(['verify' => true]);
 
 Route::get('/', 'AdvertController@index')->name('adverts.index');
 
-Route::post('/', 'AdvertController@store')->name('adverts.store');
+Route::post('/', 'AdvertController@store')->name('adverts.store')->middleware('advert');
 
-Route::resource('/adverts', 'AdvertController')->except(['index', 'store', 'show']);
+Route::resource('/adverts', 'AdvertController')->except(['index', 'store', 'show'])->middleware('advert');
 
 Route::resource('/adverts', 'AdvertController')->only(['show']);
 

@@ -27,7 +27,6 @@ class AdvertController extends Controller
     public function __construct(AdvertRepository $advertRepository, CommentRepository $commentRepository)
     {
         $this->middleware('auth');
-        $this->middleware('advert');
         $this->advertRepository = $advertRepository;
         $this->commentRepository = $commentRepository;
     }
