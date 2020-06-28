@@ -20,17 +20,17 @@
                             @csrf
 
                             @foreach($documentTypes as $documentType)
-{{--                                @foreach($documentType->documents as $document)--}}
                                 <div class="card mb-3 border-info">
                                     <div class="card-header align-content-center">
                                         {{ $documentType->title }}
                                     </div>
                                     <div class="card-body d-flex justify-content-between">
                                         <input type="file" name="{{ "{$documentType->slug}{$documentType->id}" }}">
-{{--                                        {{ $document ? "Документ загружен: {$document->created_at->format('j M H:i')}" : 'Документ отсутствует' }}--}}
+                                        {{ $document->getDocument($documentType->id) ? "Документ загружен:
+                                          {$document->getDocument($documentType->id)['created_at']->format('j M H:i')}"
+                                          : 'Документ отсутствует' }}
                                     </div>
                                 </div>
-{{--                                @endforeach--}}
                             @endforeach
 
                             <div class="d-flex justify-content-center">

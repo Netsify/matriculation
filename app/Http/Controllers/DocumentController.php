@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\DocumentRequest;
-use App\Repositories\DocumentRepository;
 use App\Models\DocumentType;
+use App\Repositories\DocumentRepository;
 
 class DocumentController extends Controller
 {
@@ -32,12 +32,10 @@ class DocumentController extends Controller
     public function index()
     {
         $documentTypes = DocumentType::all();
-//        dd($document = Document::with('DocumentType')
-//            ->find(\Auth::id())
-//            ->toSql());
-//            ->get());
 
-        return view('documents.index', compact('documentTypes'));
+        $document = $this->documentRepository;
+
+        return view('documents.index', compact('documentTypes', 'document'));
     }
 
     /**
@@ -61,6 +59,9 @@ class DocumentController extends Controller
         /** $key - input-file's name which is document type slug with id
          * $value - uploaded file's information
          */
+
+        dd($request->file()->extension());
+
         foreach ($request->file() as $key => $value) {
             $this->documentRepository->createDocument($key, $value);
         }

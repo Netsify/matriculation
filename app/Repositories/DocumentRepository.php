@@ -42,23 +42,8 @@ class DocumentRepository extends BaseRepository
             'user_id' => \Auth::id(),
             'path' => $file->store($directory, 'public'),
             'name' => pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME),
-            'document_type_id' => $typeId,
+            'extension' => $file->extension(),
+            'document_type_id' => $typeId
         ])->save();
-    }
-
-    //get specific document by it's slug
-    public function getDocument($slug)
-    {
-        return $this->model
-            ->whereHas('documenttype', function ($query) {
-                return $query->where('slug', $slug);
-            })
-            ->with('user')
-            ->find(\Auth::id());
-    }
-
-    public function getDocuments()
-    {
-        return $this->model->where('user_id', \Auth::id())->pluck('created_at');
     }
 }
