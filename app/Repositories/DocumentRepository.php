@@ -46,4 +46,13 @@ class DocumentRepository extends BaseRepository
             'document_type_id' => $typeId
         ])->save();
     }
+
+    //get specific document by it's type id
+    public function getDocument($typeId)
+    {
+        return $this->model
+            ->where('document_type_id', $typeId)
+            ->where('user_id', \Auth::id())
+            ->first(['name', 'extension', 'created_at']);
+    }
 }

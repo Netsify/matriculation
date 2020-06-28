@@ -26,9 +26,10 @@
                                     </div>
                                     <div class="card-body d-flex justify-content-between">
                                         <input type="file" name="{{ "{$documentType->slug}{$documentType->id}" }}">
-                                        {{ $document->getDocument($documentType->id) ? "Документ загружен:
-                                          {$document->getDocument($documentType->id)['created_at']->format('j M H:i')}"
-                                          : 'Документ отсутствует' }}
+                                        {{ $document->getDocument($documentType->id) ?
+                                        "{$document->getDocument($documentType->id)['name']}.{$document->getDocument($documentType->id)['extension']} загружен
+                                        {$document->getDocument($documentType->id)['created_at']->format('j M H:i')}" :
+                                        'Документ отсутствует' }}
                                     </div>
                                 </div>
                             @endforeach

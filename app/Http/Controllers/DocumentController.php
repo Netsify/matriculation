@@ -60,8 +60,6 @@ class DocumentController extends Controller
          * $value - uploaded file's information
          */
 
-        dd($request->file()->extension());
-
         foreach ($request->file() as $key => $value) {
             $this->documentRepository->createDocument($key, $value);
         }
@@ -78,8 +76,6 @@ class DocumentController extends Controller
     public function show($id)
     {
         $documents = $this->documentRepository->getById($id);
-
-//        dd($this->documentRepository->getById($id));
 
         return view('documents.show', compact('documents'));
     }

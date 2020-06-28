@@ -15,6 +15,7 @@ class Document extends Model
         'user_id',
         'name',
         'path',
+        'extension',
         'document_type_id',
     ];
 

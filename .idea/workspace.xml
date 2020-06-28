@@ -2399,9 +2399,8 @@
       <change beforePath="$PROJECT_DIR$/../bestmomo55/database/migrations/2018_08_31_172300_add_confirmation.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/DocumentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DocumentType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Document.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/DocumentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/DocumentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_04_125528_create_documents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_04_125528_create_documents_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/documents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/documents/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -2627,7 +2626,7 @@
       <workItem from="1593260447700" duration="779000" />
       <workItem from="1593282623644" duration="1550000" />
       <workItem from="1593321343998" duration="285000" />
-      <workItem from="1593321644182" duration="8603000" />
+      <workItem from="1593321644182" duration="9735000" />
     </task>
     <servers />
   </component>
