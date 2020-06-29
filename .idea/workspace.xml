@@ -2398,10 +2398,7 @@
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/tests/AssertTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo55/database/migrations/2018_08_31_172300_add_confirmation.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/DocumentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DocumentType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/DocumentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/DocumentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_04_125528_create_documents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_04_125528_create_documents_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/documents/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/documents/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -2635,7 +2632,7 @@
       <workItem from="1593321343998" duration="285000" />
       <workItem from="1593321644182" duration="9911000" />
       <workItem from="1593403297052" duration="4163000" />
-      <workItem from="1593408351255" duration="1818000" />
+      <workItem from="1593408351255" duration="2843000" />
     </task>
     <servers />
   </component>
