@@ -19,7 +19,6 @@ class CreateDocumentsTable extends Migration
             $table->integer('document_type_id');
             $table->string('path', 100);
             $table->string('name', 50);
-            $table->string('extension', 10);
             $table->timestamps();
         });
     }

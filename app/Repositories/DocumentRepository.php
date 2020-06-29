@@ -42,17 +42,16 @@ class DocumentRepository extends BaseRepository
             'user_id' => \Auth::id(),
             'path' => $file->store($directory, 'public'),
             'name' => pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME),
-            'extension' => $file->extension(),
             'document_type_id' => $typeId
         ])->save();
     }
 
-    //get specific document by it's type id
-    public function getDocument($typeId)
+    //get specific document information by it's type id
+    public function getDocumentInfo($typeId)
     {
         return $this->model
             ->where('document_type_id', $typeId)
             ->where('user_id', \Auth::id())
-            ->first(['name', 'extension', 'created_at']);
+            ->first(['name', 'created_at']);
     }
 }

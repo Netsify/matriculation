@@ -14,14 +14,4 @@ class DocumentType extends Model
     protected $fillable = [
         'title', 'slug'
     ];
-
-    /**
-     * One to Many relation
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\hasMany
-     */
-    public function documents()
-    {
-        return $this->hasMany(Document::class);
-    }
 }
