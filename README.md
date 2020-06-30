@@ -7,7 +7,7 @@ Install:
 4. composer update
 5. copy .env.example to .env
 6. php artisan key:generate
-7. for MySQL
+7. for MySQL:
 
     set DB_CONNECTION
     

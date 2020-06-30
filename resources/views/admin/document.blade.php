@@ -35,28 +35,8 @@
                                     <th>Роль</th>
                                     <td>{{$user->role->title}}</td>
                                 </tr>
-                                <tr align="center">
-                                    <th></th>
-                                    <td>
-                                        @if($user->profile)
-                                            <a href="{{ route('profiles.show', $user->profile->id) }}">Профиль</a>
-                                        @else
-                                            Профиль не создан
-                                        @endif
-                                    </td>
-                                </tr>
                             </table>
                         </div>
-{{--                                        <td>--}}
-{{--                                            @foreach($user->documents as $document)--}}
-{{--                                                <a href="{{ Storage::url($document->path) }}" download="{{ $document->name }}">--}}
-{{--    --}}{{--                                                {{ $document->documentType->title }}--}}
-{{--                                                    {{ $document->name }}--}}
-{{--                                                </a>--}}
-{{--                                            @endforeach--}}
-{{--                                        </td>--}}
-
-{{--                            {{ $students->links() }}--}}
                     </div>
                 @endforeach
             </div>
