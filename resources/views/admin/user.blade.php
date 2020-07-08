@@ -29,7 +29,7 @@
                                 </tr>
                                 <tr align="center">
                                     <th>Дата регистрации</th>
-                                    <td>{{$user->created_at}}</td>
+                                    <td>{{$user->created_at->format('j M H:i')}}</td>
                                 </tr>
                                 <tr align="center">
                                     <th>Роль</th>

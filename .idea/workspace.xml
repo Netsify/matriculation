@@ -2397,8 +2397,8 @@
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/src/Assert.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/src/Assert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/tests/AssertTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo55/database/migrations/2018_08_31_172300_add_confirmation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -2555,15 +2555,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Services" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Models" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Repositories" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\documents" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\admin" />
       <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\resources\views\profiles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\npro-\Desktop\OSPanel\domains\matriculation\app\Services" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -2635,6 +2635,20 @@
       <workItem from="1593403297052" duration="4163000" />
       <workItem from="1593408351255" duration="11520000" />
       <workItem from="1593496655462" duration="841000" />
+      <workItem from="1593500815785" duration="368000" />
+      <workItem from="1593518522895" duration="1611000" />
+      <workItem from="1593594641688" duration="2010000" />
+      <workItem from="1593661923724" duration="713000" />
+      <workItem from="1593777417747" duration="764000" />
+      <workItem from="1593842236477" duration="602000" />
+      <workItem from="1593861476064" duration="1324000" />
+      <workItem from="1593873734232" duration="953000" />
+      <workItem from="1593950860723" duration="597000" />
+      <workItem from="1594014333500" duration="1192000" />
+      <workItem from="1594126788276" duration="27000" />
+      <workItem from="1594193221217" duration="596000" />
+      <workItem from="1594220009491" duration="53000" />
+      <workItem from="1594220080658" duration="233000" />
     </task>
     <servers />
   </component>
@@ -2678,14 +2692,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="246" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1593375757046" />
-    <state x="181" y="95" key="SettingsEditor" timestamp="1592730566971">
+    <state x="181" y="95" key="SettingsEditor" timestamp="1593873710359">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="181" y="95" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592730566971" />
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1593496897277">
+    <state x="181" y="95" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593873710359" />
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1594220080059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593496897277" />
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1594220080059" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1592761242357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
