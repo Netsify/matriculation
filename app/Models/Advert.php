@@ -32,4 +32,14 @@ class Advert extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    /**
+     * Many to Many relation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }

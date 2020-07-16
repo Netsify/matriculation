@@ -9,6 +9,8 @@ use App\Models\User;
 use App\Models\Role;
 use App\Models\Profile;
 use App\Models\Comment;
+use App\Models\AdvertTag;
+use App\Models\Tag;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,7 +23,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $lipsum = new LoremIpsumGenerator;
+        $lipsum = new LoremIpsumGenerator();
 
         Role::create([
             'title' => 'Администратор',
@@ -185,6 +187,62 @@ class DatabaseSeeder extends Seeder
             'user_id' => 3,
             'advert_id' => 3,
             'body' => $lipsum->getContent(15),
+        ]);
+
+        Tag::create([
+            'title' => 'Олимпиада'
+        ]);
+
+        Tag::create([
+            'title' => 'Обучение'
+        ]);
+
+        Tag::create([
+            'title' => 'Новости'
+        ]);
+
+        Tag::create([
+            'title' => 'Досуг'
+        ]);
+
+        AdvertTag::create([
+            'advert_id' => 1,
+            'tag_id' => 1
+        ]);
+
+        AdvertTag::create([
+            'advert_id' => 1,
+            'tag_id' => 2
+        ]);
+
+        AdvertTag::create([
+            'advert_id' => 2,
+            'tag_id' => 1
+        ]);
+
+        AdvertTag::create([
+            'advert_id' => 2,
+            'tag_id' => 2
+        ]);
+
+        AdvertTag::create([
+            'advert_id' => 2,
+            'tag_id' => 3
+        ]);
+
+        AdvertTag::create([
+            'advert_id' => 3,
+            'tag_id' => 1
+        ]);
+
+        AdvertTag::create([
+            'advert_id' => 3,
+            'tag_id' => 2
+        ]);
+
+        AdvertTag::create([
+            'advert_id' => 3,
+            'tag_id' => 4
         ]);
     }
 }

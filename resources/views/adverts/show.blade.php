@@ -19,7 +19,11 @@
                         {!! $advert->body !!}
                         <div class="float-right">
                             {{ $advert->updated_at->format('j M H:i') }}
-                        </div>
+                        </div><br>
+                        Теги:
+                        @foreach($advert->tags as $tag)
+                            {{ $tag->title }}
+                        @endforeach
                     </div>
                 </div>
 
