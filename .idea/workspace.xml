@@ -2397,14 +2397,7 @@
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/src/Assert.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/src/Assert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo/vendor/webmozart/assert/tests/AssertTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bestmomo55/database/migrations/2018_08_31_172300_add_confirmation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Advert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/AdvertTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AdvertTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_08_205502_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_08_205502_create_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adverts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adverts/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
